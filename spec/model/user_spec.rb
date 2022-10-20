@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'Validations' do
-    
     subject { User.new(name: 'KJC', photo: 'http://google.com', bio: 'Hello Internet! I am KJC.') }
     before { subject.save }
 
