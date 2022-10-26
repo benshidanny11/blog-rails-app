@@ -21,7 +21,7 @@ RSpec.describe PostsController, type: :request do
     end
   end
 
-  describe 'GET /index' do
+  describe 'GET /show' do
     before(:example) do
       new_post = Post.create(author: subject, title: 'Hello', text: 'This is my first post', likes_counter: 0,
                              comments_counter: 0)
@@ -32,7 +32,7 @@ RSpec.describe PostsController, type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it 'renders post index success' do
+    it 'renders post show success' do
       expect(response).to render_template(:show)
     end
 
