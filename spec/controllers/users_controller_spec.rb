@@ -35,7 +35,7 @@ RSpec.describe UsersController, type: :request do
     end
 
     it 'shows the user data' do
-      expect(response.body).to include('User Details by')
+      expect(response.body).to include('User Details')
     end
   end
 end
