@@ -148,11 +148,11 @@ h5 {
   border-radius: 10px;
 }
 
- .post_btn:hover {
+.post_btn:hover {
   background-color: green;
- }
+}
 
- .comment_form {
+.comment_form {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -162,7 +162,7 @@ h5 {
 .comment_field {
   background-color: aliceblue;
   padding: 10px;
-  border: 0px;
+  border: 0;
   border-radius: 15px;
   resize: none;
 }
