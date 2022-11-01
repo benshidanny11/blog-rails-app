@@ -44,11 +44,6 @@ RSpec.describe 'Users', type: :system, js: true do
       expect(page).to have_content('See all Posts')
     end
 
-    # it "I can see the user's post show page" do
-    #   click_link @post1.title
-    #   expect(page).to have_current_path(user_post_path(@user, @post1))
-    # end
-
     it "I can see the user's posts index page" do
       click_link 'See all Posts'
       expect(page).to have_current_path(user_posts_path(@user))

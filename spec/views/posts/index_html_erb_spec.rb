@@ -16,15 +16,48 @@ RSpec.describe 'Posts', type: :system, js: true do
           comments_counter: 0);
 
       @comment1 = Comment.create(author: @user, post: @post2, text: 'this is comment')
-      @comment3 = Comment.create(author: @user, post: @post1, text: 'Hi guys')
+      @comment2 = Comment.create(author: @user, post: @post1, text: 'Hi guys')
+      @comment3 = Comment.create(author: @user, post: @post1, text: 'hey')
       @comment4 = Comment.create(author: @user, post: @post1, text: 'hey')
-      @comment5 = Comment.create(author: @user, post: @post1, text: 'hey')
 
       visit user_posts_path(@user)
     end
 
     it "I can see user's profile picture" do
       find("img[src='#{@user.photo}']")
+    end
+
+    it "I can see the user's username" do
+      expect(page).to have_content(@user.name)
+    end
+
+    it "I can see the user's post count" do
+      expect(page).to have_content(@user.posts_counter)
+    end
+
+    it "I can see the user's posts" do
+      expect(page).to have_content(@post1.title)
+      expect(page).to have_content(@post2.title)
+    end
+
+    it "I can see the post's body" do
+      expect(page).to have_content(@post1.text[0, 50])
+      expect(page).to have_content(@post2.text[0, 50])
+    end
+
+    it 'I can see first comments on a post' do
+      expect(page).to have_content(@comment1.text)
+      expect(page).to have_content(@comment2.text)
+    end
+
+    it 'I can see comments count on a post' do
+      expect(page).to have_content(@post1.comments_counter)
+      expect(page).to have_content(@post2.comments_counter)
+    end
+
+    it 'I can see likes count on a post' do
+      expect(page).to have_content(@post1.likes_counter)
+      expect(page).to have_content(@post2.likes_counter)
     end
 
   end
