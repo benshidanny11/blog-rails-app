@@ -61,6 +61,12 @@ For you to see the styling being applied in the browser during development
 - Twitter: [@twitterhandle](https://twitter.com/vtechbiz)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/asim-khan-9bbb4211/)
 
+👤 **Daniel Urimubenshi**
+
+- GitHub: [@githubhandle](https://github.com/benshidanny11/)
+- Twitter: [@twitterhandle](https://twitter.com/dBenshi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/danielurimubenshi/)
+
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 

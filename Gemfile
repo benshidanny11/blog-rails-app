@@ -46,7 +46,6 @@ gem 'devise', '~> 4.3'
 # gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # gem 'bcrypt', git: 'https://github.com/bcrypt-ruby/bcrypt-ruby.git', :require => 'bcrypt'
 
-
 gem 'ruby_dev', '~> 0.1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -90,3 +89,5 @@ group :test do
 end
 
 gem 'bullet'
+
+# gem "devise", "~> 4.8"
