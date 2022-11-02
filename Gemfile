@@ -38,7 +38,16 @@ gem 'rspec-support'
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+# gem 'bcrypt', '~> 3.1.8'
+# gem 'bcrypt'
+# gem 'bcrypt-ruby'
+
+gem 'devise', '~> 4.3'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+# gem 'bcrypt', git: 'https://github.com/bcrypt-ruby/bcrypt-ruby.git', :require => 'bcrypt'
+
+
+gem 'ruby_dev', '~> 0.1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
@@ -46,7 +55,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# gem 'chromedriver-helper', '~> 1.0'
+# gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
