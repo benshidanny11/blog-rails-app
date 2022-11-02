@@ -2,18 +2,18 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :system, js: true do
   describe 'users show page' do
-    before(:example) do 
-      @user = User.create(name: 'Tom', 
-        photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' , 
-        bio: 'Teacher from Mexico', posts_counter: 0 );
-      
+    before(:example) do
+      @user = User.create(name: 'Tom',
+                          photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                          bio: 'Teacher from Mexico', posts_counter: 0)
+
       @post1 = Post.create(author: @user, title: 'Timmy Jimmy', text: 'Hey Jimmy jimmy', likes_counter: 0,
-          comments_counter: 0);
-      
+                           comments_counter: 0)
+
       @post2 = Post.create(author: @user, title: 'Alan Luqman', text: 'This is awesome', likes_counter: 0,
-          comments_counter: 0);
+                           comments_counter: 0)
       @post3 = Post.create(author: @user, title: 'Alan', text: 'Great guy', likes_counter: 0,
-          comments_counter: 0);
+                           comments_counter: 0)
 
       visit user_path(@user)
     end
@@ -48,6 +48,5 @@ RSpec.describe 'Users', type: :system, js: true do
       click_link 'See all Posts'
       expect(page).to have_current_path(user_posts_path(@user))
     end
-
   end
 end

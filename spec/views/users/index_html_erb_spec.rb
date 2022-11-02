@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :system, js: true do
   describe 'users index page' do
-    before(:example) do 
-      @user = User.create(name: 'Tom', 
-        photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' , 
-        bio: 'I am software engineer', posts_counter: 0 );
+    before(:example) do
+      @user = User.create(name: 'Tom',
+                          photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                          bio: 'I am software engineer', posts_counter: 0)
       visit users_path
     end
 

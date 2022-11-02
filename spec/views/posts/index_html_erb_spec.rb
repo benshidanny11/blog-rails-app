@@ -3,17 +3,17 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :system, js: true do
   describe 'index page' do
     before(:example) do
-      @user = User.create(name: 'Tom', 
-        photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' , 
-        bio: 'Teacher from Mexico', posts_counter: 0 );
-      
+      @user = User.create(name: 'Tom',
+                          photo: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                          bio: 'Teacher from Mexico', posts_counter: 0)
+
       @post1 = Post.create(author: @user, title: 'Timmy Jimmy', text: 'Hey Jimmy jimmy', likes_counter: 0,
-          comments_counter: 0);
-      
+                           comments_counter: 0)
+
       @post2 = Post.create(author: @user, title: 'Alan Luqman', text: 'This is awesome', likes_counter: 0,
-          comments_counter: 0);
+                           comments_counter: 0)
       @post3 = Post.create(author: @user, title: 'Alan', text: 'Great guy', likes_counter: 0,
-          comments_counter: 0);
+                           comments_counter: 0)
 
       @comment1 = Comment.create(author: @user, post: @post2, text: 'this is comment')
       @comment2 = Comment.create(author: @user, post: @post1, text: 'Hi guys')
@@ -59,6 +59,5 @@ RSpec.describe 'Posts', type: :system, js: true do
       expect(page).to have_content(@post1.likes_counter)
       expect(page).to have_content(@post2.likes_counter)
     end
-
   end
 end
