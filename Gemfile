@@ -40,13 +40,7 @@ gem 'rspec-support'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem 'bcrypt', '~> 3.1.8'
 
-<<<<<<< HEAD
-# gem 'devise'
-# gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
-# gem 'bcrypt', git: 'https://github.com/bcrypt-ruby/bcrypt-ruby.git', :require => 'bcrypt'
-=======
 gem 'devise', '~> 4.3'
->>>>>>> 938bd50ca5684d0a0a82d2c4135510a690cd68c7
 
 gem 'ruby_dev', '~> 0.1.0'
 
