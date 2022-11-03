@@ -42,7 +42,7 @@ gem 'rspec-support'
 # gem 'bcrypt'
 # gem 'bcrypt-ruby'
 
-gem 'devise'
+# gem 'devise'
 # gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # gem 'bcrypt', git: 'https://github.com/bcrypt-ruby/bcrypt-ruby.git', :require => 'bcrypt'
 
