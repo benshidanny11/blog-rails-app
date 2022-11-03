@@ -8,6 +8,8 @@ gem 'ffi' if ENV['CHILDPROCESS_POSIX_SPAWN'] == 'true' || Gem.win_platform?
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -38,7 +40,11 @@ gem 'rspec-support'
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+# gem 'bcrypt', '~> 3.1.8'
+
+gem 'devise', '~> 4.3'
+
+gem 'ruby_dev', '~> 0.1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
@@ -46,7 +52,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# gem 'chromedriver-helper', '~> 1.0'
+# gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -81,5 +87,3 @@ group :test do
 end
 
 gem 'bullet'
-
-gem "devise", "~> 4.8"
