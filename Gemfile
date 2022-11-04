@@ -87,5 +87,4 @@ group :test do
 end
 
 gem 'bullet'
-
 gem 'cancancan'

@@ -10,9 +10,13 @@
   <div class = 'bio_container'>
     <h4> Bio </h4>
     <p><%= @user.bio %></p>
+
+    <%  if can? :create, Post %>
+      <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%> 
+    <% end %>
   </div>
 
-  <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%>
+  <%# <%= link_to "Add New Post", "/users/#{@user.id}/posts/new", {:class => "see_all_post"}%> 
   
   <h4>Recent posts </h4>
     <% if @user.posts_counter > 0 %>
@@ -23,6 +27,11 @@
               <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class = 'user_clickable'>
                 <h3>#<%= post[:id] %> <%= post[:title] %> </h3>
                 <p> <%= post[:text] %> </p>
+
+                <%  if can? :destroy, Post %>
+                  <%= button_to 'delete post', "/users/#{@user.id}/posts/#{post.id}", method: :delete%>
+                <% end %>
+
                 <p class = 'post_counter' >Comments:<%= post[:comments_counter] %> Likes: <%= post[:likes_counter] %> </p>
               </a>
             </li>

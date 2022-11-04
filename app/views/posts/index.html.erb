@@ -14,12 +14,18 @@
         <a href="/users/<%= @user.id %>/posts/<%= post.id %>" class = 'user_clickable'>
           <h3>#<%= post[:id] %> <%= post[:title] %> </h3>
           <p> <%= post[:text] %> </p>
+          <%  if can? :destroy, Post %>
+            <%= button_to 'delete post', "/users/#{@user.id}/posts/#{post.id}", method: :delete%>
+          <% end %>
           <p class = 'post_counter' >Comments:<%= post[:comments_counter] %> Likes: <%= post[:likes_counter] %> </p>
           <ul>
             <% post.most_recent_comments.each do |comment| %>
               <li class = 'comment_holder'>
                 <h5> <%= comment.author.name%></h5>
                 <p><%= comment.text%> </p>
+                <% if can? :destroy, Comment %>
+                  <%= button_to 'delete comment', "/posts/#{post.id}/comments/#{comment.id}", method: :delete %>
+                <% end %>
               </li>
             <%end%>
           </ul>
