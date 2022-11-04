@@ -28,7 +28,7 @@
           <h5> <%= comment.author.name %></h5>
           <p><%= comment[:text] %> </p>
           <% if can? :destroy, Comment %>
-         <%= button_to 'delete comment', "/posts/#{@post.id}/comments/#{comment.id}", method: :delete %>
+          <%= button_to 'delete comment', "/posts/#{@post.id}/comments/#{comment.id}", method: :delete %>
           <% end %>
         </li>
       <% end %>
